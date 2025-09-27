@@ -1,6 +1,6 @@
 import React from 'react';
 import formularioThumb from '../assets/formulario-screenshot.png'; // Projeto 1
-import novoProjetoThumb from '../assets/hypersound.png'; // Projeto 2
+import novoProjetoThumb from '../assets/Hypersound.png'; // Projeto 2
 
 function Projetos() {
   function abrirProjeto(url) {

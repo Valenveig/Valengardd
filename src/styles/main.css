@@ -483,7 +483,7 @@ header nav a:hover {
   height: 4px;
   margin: 10px auto 0;
   border-radius: 4px;
-  background: rgb(130, 87, 230));
+  background: rgb(130, 87, 230);
   animation: gradientMove 5s linear infinite;
   background-size: 200% 200%;
 }
