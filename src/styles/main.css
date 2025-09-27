@@ -1,0 +1,1055 @@
+/* ===================== Variáveis de cores ===================== */
+:root {
+  --primary-bg: #131418;          /* Fundo principal */
+  --alt-bg: rgb(130, 87, 230);    /* Fundo alternativo */
+  --highlight: rgb(232, 231, 236);/* Destaque */
+  --text-primary: rgb(130, 87, 230); /* Texto principal */
+  --text-secondary: white;        /* Texto secundário */
+}
+
+/* ===================== Reset básico ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--highlight);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--text-primary);
+}
+
+/* ===================== Container padrão ===================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===================== Sections padrao ===================== */
+.hero,
+.about,
+.skills,
+.projects, 
+.contato {
+  min-height: 100vh;         /* ocupa toda a altura da tela */
+  display: flex;
+  flex-direction: column;    /* garante empilhamento */
+  justify-content: center;   /* centraliza verticalmente */
+  align-items: center;       /* centraliza horizontalmente */
+  padding: 60px 20px;        /* espaço interno */
+  text-align: center;
+}
+
+/* ===================== Sections padronizadas ===================== */
+.hero,
+.about,
+.skills,
+.projects,
+.contato {
+  padding-top: 120px;    /* espaço superior padronizado */
+  padding-bottom: 120px; /* espaço inferior padronizado */
+}
+
+
+/* ===================== Header ===================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color:#37205c00;
+  color: var(--text-primary);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav a {
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  color: var(--highlight);
+}
+
+/* ===================== Hero ===================== */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 60px 20px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column; /* empilha imagem e texto */
+  align-items: center;    /* centraliza horizontalmente */
+  gap: 30px;              /* espaço entre imagem e texto */
+}
+
+.hero-img {
+  width: 220px;
+  border-radius: 50%;
+  border: 5px solid rgb(130, 87, 230);
+  justify-content: center;
+}
+
+.texto-apresentacao {
+  flex: 1;
+  min-width: 280px;
+}
+
+.texto-apresentacao h1 {
+  font-size: 2.8rem;
+  color: var(--text-secondary);
+}
+
+.texto-apresentacao p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin: 20px 0;
+}
+
+.texto-destaque {
+  color: rgb(130, 87, 230);
+}
+
+.botoes-hero {
+  display: flex;
+  justify-content: center; /* centraliza os botões */
+  flex-wrap: wrap;         /* permite quebra de linha se necessário */
+  gap: 15px;               /* controla a distância entre os botões */
+}
+
+.botoes-hero .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+  color: #ffffff;
+  background-color: rgb(130, 87, 230);
+  text-align: center;
+  animation: pulse-continuous 3s infinite;
+  /* REMOVIDO margin-right */
+}
+
+
+.botoes-hero .btn:hover {
+  background-color: var(--text-primary);
+  color: var(--primary-bg);
+}
+
+.btn-secundario {
+  background-color: transparent;
+  border: 2px solid rgb(130, 87, 230);
+  color: #ffffff;
+  width: 160px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 25px;
+}
+
+.btn-secundario:hover {
+  background-color: rgb(130, 87, 230);
+  color: #ffffff;
+}
+
+@keyframes pulse-continuous {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(130, 87, 230, 0.4), 0 0 20px rgba(130, 87, 230, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(130, 87, 230, 0.6), 0 0 30px rgba(130, 87, 230, 0.4);
+  }
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* ===================== About ===================== */
+.about {
+  min-height: auto; /* não força 100vh */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  padding: 150px 20px; /* espaçamento superior e inferior */
+  text-align: center;
+}
+
+/* Seção Sobre */
+.sobre-container {
+  display: flex;
+  justify-content: center;  /* centraliza horizontalmente */
+  align-items: flex-start;  /* conteúdo começa do topo */
+  padding: 120px 20px;      /* espaço acima e abaixo */
+  text-align: center;
+  background-color: #1a0f2c;
+  border-radius: 16px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  max-width: 1000px;
+  margin: 0 auto 100px auto; /* margem inferior para separar da próxima seção */
+}
+
+.sobre-container:hover {
+  box-shadow: 0 0 30px 5px rgba(130, 87, 230, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Conteúdo interno */
+.sobre-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* distância entre H4, H2 e P */
+  max-width: 800px;
+}
+
+/* Estilos de texto */
+.sobre-conteudo h4 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: rgb(130, 87, 230);
+}
+
+.sobre-conteudo h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: white;
+}
+
+.sobre-conteudo p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+/* ===================== Conhecimentos / Skills ===================== */
+.conhecimentos {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.cards-conhecimentos {
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card-conhecimentos {
+  background-color: #1a0f2c;
+  border-radius: 10px;
+  width: 150px;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+
+.card-conhecimentos:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(130, 87, 230, 0.6),
+              0 0 15px rgba(130, 87, 230, 0.5);
+  filter: drop-shadow(0 0 8px rgba(130, 87, 230, 0.6));
+}
+
+.card-conhecimentos img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.card-conhecimentos p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+/* Tooltip */
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  background-color: var(--highlight);
+  color: var(--primary-bg);
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px 10px;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+.tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--highlight) transparent transparent transparent;
+}
+
+.tooltip-text.visivel {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ===================== Projects ===================== */
+.projects {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #1a0f2c;
+  border-radius: 16px;
+  width: 200px;
+  min-height: 250px;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(130, 87, 230, 0.6),
+              0 0 15px rgba(130, 87, 230, 0.5);
+  filter: drop-shadow(0 0 8px rgba(130, 87, 230, 0.6));
+}
+
+.project-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* ===================== Contato ===================== */
+.contato {
+  background-color: var(--primary-bg);
+  color: var(--text-secondary);
+  padding: 80px 50px;
+  text-align: center;
+  position: relative;
+}
+
+.contato h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: rgb(130, 87, 230);
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #37205c;
+  color: floralwhite;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(130, 87, 230, 0.6);
+  border: 1px solid rgba(151, 109, 250, 0.8);
+}
+
+.form-contato button.btn {
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(130, 87, 230);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: pulse-btn 3s infinite;
+}
+
+.form-contato button.btn:hover:enabled {
+  transform: translateY(-3px);
+  background-color: var(--text-primary);
+  color: var(--primary-bg);
+}
+
+@keyframes pulse-btn {
+  0% {
+    box-shadow: 0 4px 10px rgba(130, 87, 230, 0.6), 0 0 5px rgba(130, 87, 230, 0.4);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(130, 87, 230, 0.8), 0 0 15px rgba(130, 87, 230, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 10px rgba(130, 87, 230, 0.6), 0 0 5px rgba(130, 87, 230, 0.4);
+  }
+}
+
+/* ===================== Redes sociais fixas ===================== */
+.redes-sociais-fixas {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.redes-sociais-fixas a {
+  font-size: 1.5rem;
+  color: var(--highlight);
+  transition: all 0.3s;
+}
+
+.redes-sociais-fixas a:hover {
+  color: var(--text-primary);
+  transform: scale(1.2);
+}
+
+/* ===================== Modal ===================== */
+.modal-confirmacao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-confirmacao div {
+  background-color: var(--alt-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  color: var(--text-secondary);
+}
+
+.modal-confirmacao button.btn {
+  margin-top: 15px;
+  background-color: rgb(130, 87, 230);
+}
+
+.modal-confirmacao button.btn:hover {
+  background-color: var(--text-primary);
+  color: var(--primary-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(130, 87, 230, 0.6), 0 0 10px rgba(130, 87, 230, 0.5);
+}
+
+/* ===================== Footer ===================== */
+.footer {
+  position: relative;
+  background-color: var(--alt-bg);
+  color: var(--highlight);
+  padding: 16px 50px;
+  text-align: center;
+}
+
+.footer-text {
+  text-align: center; /* mantém o texto no centro */
+}
+
+.social-icons {
+  position: absolute;
+  right: 20px; /* distancia do canto direito */
+  top: 50%;
+  transform: translateY(-50%); /* centraliza verticalmente */
+  display: flex;
+  gap: 8px;
+}
+
+.social-icons a {
+  color: var(--highlight);
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--primary-bg);
+}
+
+
+/* ===================== Responsividade ===================== */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagem-hero img {
+    width: 200px;
+    margin-top: 30px;
+  }
+
+  .form-contato {
+    width: 90%;
+  }
+
+  .redes-sociais-fixas {
+    gap: 15px;
+  }
+
+  .form-contato button.btn {
+    width: 100%;
+  }
+
+  .projects-grid {
+    gap: 30px;
+  }
+}
+
+/* Desktop/Tablet (Reverte o posicionamento para alinhamento lateral) */
+@media (min-width: 769px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 50px;
+  }
+  .social-icons {
+    position: absolute;
+    right: 50px; /* Distancia do canto direito */
+    top: 50%;
+    transform: translateY(-50%);
+    margin-bottom: 0;
+  }
+}
+
+/* ===================== Ajustes Finais para Mobile Extremo (< 480px) ===================== */
+@media (max-width: 480px) {
+    /* Diminui a altura mínima das seções para telas muito curtas */
+    .hero,
+    .about,
+    .skills,
+    .projects,
+    .contato {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        min-height: auto; /* Permite que o conteúdo defina a altura */
+    }
+
+    /* Oculta navegação principal para focar no conteúdo e logo */
+    header nav {
+        display: none;
+    }
+
+    .cards-conhecimentos {
+        /* Permite que ocupe menos de 100px se necessário */
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}
+
+/* ===================== Base Mobile Completa (320px a 479px) ===================== */
+@media (max-width: 479px) {
+  /* ===================== Header ===================== */
+  header {
+    padding: 10px 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+
+  /* ===================== Hero ===================== */
+  .hero {
+    padding: 60px 5%;
+    min-height: auto;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .imagem-hero img {
+    width: 80%;
+    max-width: 160px;
+    height: auto;
+    border-width: 4px;
+  }
+
+  .texto-apresentacao h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .texto-apresentacao p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .botoes-hero {
+    flex-direction: row;   /* lado a lado no mobile */
+    width: 100%;           /* ocupa a largura da tela */
+    justify-content: center; /* centraliza horizontalmente */
+  }
+
+  .botoes-hero .btn,
+  .botoes-hero .btn-secundario {
+    flex: 1;               /* cada botão ocupa metade do espaço disponível */
+    max-width: 140px;      /* opcional: limita largura máxima */
+    margin: 0 5px;         /* espaço entre os botões */
+  }
+}
+  /* ===================== Skills ===================== */
+    .cards-conhecimentos {
+    grid-template-columns: repeat(2, 1fr); /* mantém 2 colunas */
+    gap: 16px; /* reduz levemente o espaçamento */
+    max-width: 280px; /* se ajusta à tela pequena */
+  }
+
+  .card-conhecimentos {
+    padding: 10px;
+    min-width: auto;
+  }
+
+  .card-conhecimentos img {
+    width: 50px; /* reduz a imagem para mobile */
+    height: 50px;
+    margin-bottom: 8px;
+  }
+
+  .card-conhecimentos p {
+    font-size: 0.9rem; /* texto um pouco menor */
+  }
+
+
+
+  /* ===================== Projects ===================== */
+@media (max-width: 479px) {
+  .projects {
+    padding: 40px 20px; /* espaço nas laterais da seção */
+  }
+
+  .projects h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* duas colunas iguais */
+    gap: 16px; /* aumenta o espaço entre os cards */
+    padding: 0; /* não precisa de padding extra no grid */
+  }
+
+  .project-card {
+    padding: 12px;      /* padding interno menor */
+    min-height: 200px;
+    box-sizing: border-box;
+    width: 100%;         /* garante que cada card ocupe a coluna inteira */
+  }
+
+  .project-card img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 6px;
+  }
+
+  .project-card h3 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .project-card p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+
+
+  /* ===================== Contato ===================== */
+  .contato {
+    padding: 60px 5%;
+    text-align: center;
+  }
+
+  .form-contato {
+    width: 95%;
+    gap: 12px;
+  }
+
+  .form-contato input,
+  .form-contato textarea {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .form-contato button.btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  /* ===================== Redes Sociais ===================== */
+  .redes-sociais-fixas {
+    gap: 100px;
+  }
+
+  .redes-sociais-fixas a {
+    font-size: 1.0rem;
+  }
+
+  /* ===================== Footer ===================== */
+@media (max-width: 479px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;           /* permite quebrar linha se não couber */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 122px;         /* respiro mínimo nas laterais */
+    box-sizing: border-box;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+    margin-left: 0;            /* remove margens grandes */
+    flex: 1 1 auto;            /* permite encolher se necessário */
+  }
+
+  .redes-sociais-fixas {
+    display: flex;
+    gap: 8px;
+    margin-right: 0;           /* remove margens grandes */
+    flex: 0 0 auto;            /* não cresce, mantém tamanho dos ícones */
+  }
+
+  .redes-sociais-fixas a {
+    font-size: 0.7rem;         /* reduz ícones para caber */
+  }
+}
+
+
+/* ===================== Tablets (Galaxy S9, vTablet6s, etc) ===================== */
+@media (min-width: 480px) and (max-width: 768px) {
+  .cards-conhecimentos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 360px;
+  }
+
+  .card-conhecimentos {
+    padding: 12px;
+    min-height: 160px;
+  }
+
+  .card-conhecimentos img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-conhecimentos p {
+    font-size: 0.9rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 600px;
+  }
+
+  .project-card {
+    padding: 14px;
+    min-height: 180px;
+  }
+
+  .project-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    padding: 12px 15px;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+
+  .redes-sociais-fixas a {
+    font-size: 0.85rem;
+  }
+}
+/* ===================== Responsividade para tablets iPad (768px a 1024px) ===================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Hero */
+  .hero {
+    padding: 80px 8%;
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 4vw, 3rem);
+  }
+  .hero p {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  }
+  .botoes-hero .btn,
+  .btn-secundario {
+    padding: 14px 24px;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+  }
+
+  /* Skills */
+.cards-conhecimentos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;          /* centraliza o grid dentro do container */
+  justify-content: center;  /* centraliza as colunas horizontalmente */
+  margin-top: 64px;
+  justify-items: center;    /* centraliza o conteúdo dentro de cada coluna */
+}
+
+.card-conhecimentos {
+  padding: 24px;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centraliza conteúdo dentro do card */
+  justify-content: center;
+}
+
+.card-conhecimentos img {
+  width: 70px;
+  height: 70px;
+}
+
+.card-conhecimentos p {
+  font-size: 1.08rem;
+  text-align: center;
+}
+
+.skills {
+  padding-bottom: 40px; /* antes estava maior, ex: 50px ou 60px */
+}
+
+ /* ===================== Projects ===================== */
+
+.projects {
+  padding-top: 40px; /* antes estava maior, ex: 60px */
+}
+
+
+ .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas para tablets/desktops */
+  gap: 24px;
+  max-width: 960px;           /* largura máxima do grid */
+  margin: 0 auto;             /* centraliza o grid dentro do container */
+  justify-content: center;     /* centraliza as colunas horizontalmente */
+  justify-items: center;       /* centraliza conteúdo dentro de cada coluna */
+}
+
+.project-card {
+  padding: 18px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* centraliza conteúdo do card */
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 64;
+}
+
+.project-card img {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+
+  /* Footer */
+  .footer {
+    padding: 12px 6vw;
+  }
+  .footer-text {
+    font-size: 0.95rem;
+  }
+  .redes-sociais-fixas a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* ===================== Skills ===================== */
+  .skills {
+    padding-top: 50px;
+    padding-bottom: 20px;      /* reduz espaço inferior */
+  }
+
+  .cards-conhecimentos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;                  /* espaçamento menor entre cards */
+    max-width: 960px;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .card-conhecimentos {
+    min-height: auto;           /* deixa o card ajustar altura automaticamente */
+    margin: 0;
+    padding: 15px;
+  }
+
+  /* ===================== Projects ===================== */
+  .projects {
+    padding-top: 20px;          /* reduz espaço superior */
+    padding-bottom: 50px;
+  }
+
+  .projects h2 {
+    margin-top: 0;              /* remove margem superior do título */
+    margin-bottom: 16px;        /* mantém espaçamento confortável */
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;                  /* diminui espaçamento entre cards */
+    max-width: 960px;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .project-card {
+    min-height: auto;           /* deixa o card ajustar altura automaticamente */
+    margin: 0;
+    padding: 15px;
+  }
+}
