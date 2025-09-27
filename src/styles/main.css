@@ -892,164 +892,87 @@ header nav a:hover {
     font-size: 0.85rem;
   }
 }
-/* ===================== Responsividade para tablets iPad (768px a 1024px) ===================== */
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* Hero */
-  .hero {
-    padding: 80px 8%;
-  }
-  .hero h1 {
-    font-size: clamp(2.5rem, 4vw, 3rem);
-  }
-  .hero p {
-    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-  }
-  .botoes-hero .btn,
-  .btn-secundario {
-    padding: 14px 24px;
-    font-size: clamp(1rem, 2vw, 1.1rem);
-  }
 
-  /* Skills */
+.conhecimentos {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  padding: 80px 50px;
+  text-align: center;
+}
+
 .cards-conhecimentos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;          /* centraliza o grid dentro do container */
-  justify-content: center;  /* centraliza as colunas horizontalmente */
-  margin-top: 64px;
-  justify-items: center;    /* centraliza o conteúdo dentro de cada coluna */
+  grid-template-columns: repeat(5, 150px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .card-conhecimentos {
-  padding: 24px;
-  min-height: 64px;
+  background-color: #1a0f2c;
+  border-radius: 10px;
+  width: 150px;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;      /* centraliza conteúdo dentro do card */
-  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+
+.card-conhecimentos:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(130, 87, 230, 0.6),
+              0 0 15px rgba(130, 87, 230, 0.5);
+  filter: drop-shadow(0 0 8px rgba(130, 87, 230, 0.6));
 }
 
 .card-conhecimentos img {
-  width: 70px;
-  height: 70px;
-}
-
-.card-conhecimentos p {
-  font-size: 1.08rem;
-  text-align: center;
-}
-
-.skills {
-  padding-bottom: 40px; /* antes estava maior, ex: 50px ou 60px */
-}
-
- /* ===================== Projects ===================== */
-
-.projects {
-  padding-top: 40px; /* antes estava maior, ex: 60px */
-}
-
-
- .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas para tablets/desktops */
-  gap: 24px;
-  max-width: 960px;           /* largura máxima do grid */
-  margin: 0 auto;             /* centraliza o grid dentro do container */
-  justify-content: center;     /* centraliza as colunas horizontalmente */
-  justify-items: center;       /* centraliza conteúdo dentro de cada coluna */
-}
-
-.project-card {
-  padding: 18px;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;        /* centraliza conteúdo do card */
-  justify-content: center;
-  box-sizing: border-box;
-  margin-top: 64;
-}
-
-.project-card img {
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   margin-bottom: 10px;
 }
 
-.project-card h3 {
+.card-conhecimentos p {
   font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 6px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 5px;
 }
 
-.project-card p {
-  font-size: 0.9rem;
-  text-align: center;
+/* ===================== Skills / Conhecimentos - Desktop ===================== */
+.cards-conhecimentos {
+  display: grid;
+  grid-template-columns: repeat(5, 150px); /* 5 colunas fixas */
+  gap: 20px;
+  justify-content: center; /* centraliza o grid no container */
+  margin: 40px auto 0 auto; /* centraliza horizontalmente */
+  width: 100%;
+  max-width: 1200px; /* mantém limite máximo */
 }
 
-
-  /* Footer */
-  .footer {
-    padding: 12px 6vw;
-  }
-  .footer-text {
-    font-size: 0.95rem;
-  }
-  .redes-sociais-fixas a {
-    font-size: 1rem;
-  }
+.card-conhecimentos {
+  background-color: #1a0f2c;
+  border-radius: 10px;
+  width: 150px; /* fixa a largura do card */
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza o conteúdo do card */
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* ===================== Skills ===================== */
-  .skills {
-    padding-top: 50px;
-    padding-bottom: 20px;      /* reduz espaço inferior */
-  }
+.card-conhecimentos img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
 
-  .cards-conhecimentos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;                  /* espaçamento menor entre cards */
-    max-width: 960px;
-    margin: 0 auto;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .card-conhecimentos {
-    min-height: auto;           /* deixa o card ajustar altura automaticamente */
-    margin: 0;
-    padding: 15px;
-  }
-
-  /* ===================== Projects ===================== */
-  .projects {
-    padding-top: 20px;          /* reduz espaço superior */
-    padding-bottom: 50px;
-  }
-
-  .projects h2 {
-    margin-top: 0;              /* remove margem superior do título */
-    margin-bottom: 16px;        /* mantém espaçamento confortável */
-  }
-
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;                  /* diminui espaçamento entre cards */
-    max-width: 960px;
-    margin: 0 auto;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .project-card {
-    min-height: auto;           /* deixa o card ajustar altura automaticamente */
-    margin: 0;
-    padding: 15px;
-  }
+.card-conhecimentos p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 5px;
 }
