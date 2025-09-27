@@ -6,7 +6,9 @@ function Hero() {
     <section className="hero fade" id="home">
       <div className="hero-content">
         {/* Imagem centralizada */}
-        <img src={fotoHero} alt="Foto da Valengardd" className="hero-img" />
+        <div className="hero-img-wrapper">
+  <img src={fotoHero} alt="Foto da Valengardd" className="hero-img" />
+</div>
 
         {/* Texto abaixo */}
         <div className="texto-apresentacao">

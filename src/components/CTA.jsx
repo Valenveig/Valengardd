@@ -44,7 +44,7 @@ function Contato() {
       >
         <div 
           style={{
-            background: '#fff',
+            background: 'rgba(30, 19, 58, 1)',
             padding: '2rem',
             borderRadius: '8px',
             maxWidth: '400px',
@@ -53,9 +53,10 @@ function Contato() {
           }}
         >
           <h2 id="modal-titulo">Sua mensagem foi enviada com sucesso!</h2>
-          <button className="btn" onClick={fechar} aria-label="Fechar confirmação">
-            Fechar
-          </button>
+         <button className="btn btn-modal" onClick={fechar} aria-label="Fechar confirmação">
+  Fechar
+</button>
+
         </div>
       </div>
     );
