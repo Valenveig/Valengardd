@@ -1,16 +1,102 @@
-# React + Vite
+# 🌐 Portfólio - Valengardd
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-purple)
+![React](https://img.shields.io/badge/React-18.0-blue?logo=react)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Sobre o Projeto
 
-## React Compiler
+Este é o **portfólio pessoal de Valentina Gomes (Valengardd)**, desenvolvido com foco em design moderno, responsividade e performance.  
+O objetivo do projeto é apresentar minhas **habilidades, projetos e formas de contato** em um só lugar, com uma interface elegante e intuitiva.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ **React.js** — Biblioteca principal para construção da interface  
+- 🎨 **CSS3** — Estilização customizada com foco em design moderno e responsivo  
+- 📦 **Vite.js** — Ferramenta de build rápida para desenvolvimento  
+- 📧 **EmailJS** — Integração de envio de formulários de contato via email  
+- 🔤 **Google Fonts** — Tipografia personalizada  
+- 🎭 **React Icons** — Ícones estilizados e acessíveis  
+
+---
+
+## ✨ Funcionalidades
+
+✔️ **Seção Hero** com foto animada e botões de ação  
+✔️ **Sobre mim** apresentando minha trajetória e objetivos  
+✔️ **Skills** organizadas em cards responsivos  
+✔️ **Projetos** com preview, descrição e links externos  
+✔️ **Formulário de contato** integrado ao EmailJS com modal de confirmação  
+✔️ **Footer** com links diretos para redes sociais  
+✔️ **Design responsivo (Mobile First)** adaptado para todas as telas  
+
+---
+
+## 📂 Estrutura de Pastas
+
+📦 meu-portfolio
+├── 📁 public # Arquivos estáticos
+├── 📁 src
+│ ├── 📁 assets # Imagens e ícones
+│ ├── 📁 components # Componentes React (Hero, Skills, Projetos, Contato, Footer)
+│ ├── App.jsx # Estrutura principal
+│ ├── main.jsx # Entrada do React
+│ └── styles.css # Estilização global
+├── package.json
+└── vite.config.js
+
+
+---
+
+## 🛠️ Como Rodar o Projeto Localmente
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/Valenveig/Valengardd.git
+   cd Valengardd
+
+
+
+2. **Instale as dependências**
+
+npm install
+
+
+
+3. **Rode o servidor de desenvolvimento**
+
+npm run dev
+
+
+
+4. **Abra no navegador**
+👉 http://localhost:5173
+
+
+🌍 Deploy
+
+O projeto está publicado em:
+🔗 valengardd.vercel.app
+
+
+📬 Contato
+
+💼 LinkedIn: Valentina Gomes
+
+🐙 GitHub: Valenveig
+
+
+✉️ Email: vgdesigncriativo@gmail.com
+
+
+📜 Licença
+
+Este projeto está sob a licença MIT — sinta-se livre para usar e modificar.
+
+
+
+
